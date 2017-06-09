@@ -1,0 +1,9 @@
+apply plugin: 'java'
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.auto.service:auto-service:1.0-rc2'//谷歌的帮助我们快速实现注解处理器
+    compile project(':inject_annotation')//自己定义的注解的java lib
+    compile 'com.squareup:javapoet:1.7.0'//用来生成java文件的，避免字符串拼接的尴尬
+}
